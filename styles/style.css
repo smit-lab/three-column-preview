@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  display: grid;
+  place-content: center;
+  margin: 5rem 0;
+}
+
+.card {
+  width: 20.4375rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card-box {
+  padding: 3rem 2.96875rem;
+  color: #f2f2f2;
+}
+.card-box--sedans {
+  background-color: hsl(31, 77%, 52%);
+}
+.card-box--suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+.card-box--luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+.card-box__icon {
+  margin-bottom: 2.1875rem;
+}
+.card-box__heading {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.5625rem;
+  line-height: 1.2;
+}
+.card-box__para {
+  font-size: 0.9375rem;
+  line-height: 1.67;
+  color: #fff;
+  opacity: 0.75;
+  margin-bottom: 1.5625rem;
+}
+.card-box__cta {
+  background-color: #fff;
+  padding: 0.5625rem 1.84375rem 0.625rem;
+  border: 2px solid #fff;
+  border-radius: 6.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.67;
+  transition: all 0.2s ease-out;
+}
+.card-box__cta--sedans {
+  color: hsl(31, 77%, 52%);
+}
+.card-box__cta--suvs {
+  color: hsl(184, 100%, 22%);
+}
+.card-box__cta--luxury {
+  color: hsl(179, 100%, 13%);
+}
+
+@media (min-width: 1024px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 57.5rem;
+  }
+  .card-box__para {
+    margin-bottom: 5.1875rem;
+  }
+  .card-box__cta:hover {
+    color: #fff;
+    background-color: transparent;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

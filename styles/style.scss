@@ -1,0 +1,84 @@
+@import "reset";
+@import "globals";
+@import "function";
+
+body {
+  @include grid-centering;
+  margin: rem(80) 0;
+}
+
+.card {
+  width: rem(327);
+  border-radius: rem(8);
+  overflow: hidden;
+
+  &-box {
+    padding: rem(48) rem(47.5);
+    color: #f2f2f2;
+
+    &--sedans {
+      background-color: $orange;
+    }
+    &--suvs {
+      background-color: $cyan;
+    }
+    &--luxury {
+      background-color: $darkCyan;
+    }
+
+    &__icon {
+      margin-bottom: rem(35);
+    }
+
+    &__heading {
+      font-family: $ff-heading;
+      font-size: rem(40);
+      font-weight: $fw-heading;
+      text-transform: uppercase;
+      margin-bottom: rem(25);
+      line-height: 1.2;
+    }
+
+    &__para {
+      font-size: rem(15);
+      line-height: 1.67;
+      color: #fff;
+      opacity: 0.75;
+      margin-bottom: rem(25);
+    }
+
+    &__cta {
+      @include cta;
+      font-size: rem(15);
+      line-height: 1.67;
+      transition: all 0.2s ease-out;
+
+      &--sedans {
+        color: $orange;
+      }
+      &--suvs {
+        color: $cyan;
+      }
+      &--luxury {
+        color: $darkCyan;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: rem(920);
+  }
+
+  .card-box__para {
+    margin-bottom: rem(83);
+  }
+
+  .card-box__cta:hover {
+    color: #fff;
+    background-color: transparent;
+  }
+}

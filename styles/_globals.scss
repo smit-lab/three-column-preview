@@ -1,0 +1,20 @@
+//fonts
+$ff-heading: 'Big Shoulders Display', cursive;
+$fw-heading: 700;
+$lh-body-btn: 1.67;
+//colors
+$orange: hsl(31, 77%, 52%);
+$cyan: hsl(184, 100%, 22%);
+$darkCyan: hsl(179, 100%, 13%);
+//grid
+@mixin cta{
+  background-color: #fff;
+  padding: rem(9) rem(29.5) rem(10);
+  border: 2px solid #fff;
+  border-radius: rem(100);
+}
+//grid-centering
+@mixin grid-centering {
+  display: grid;
+  place-content: center;
+}
